@@ -4,7 +4,8 @@ parse_table_demo.py - Example of parsing an HTML table
 Reads the first population table from Wikipedia.
 """
 
-
+import requests
+from bs4 import BeautifulSoup
 
 url = "https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)"
 response = requests.get(url, headers={"User-Agent": "CS3030-Student"})
